@@ -37,16 +37,16 @@ function countChar(text, target) {
     for (const ch of text) {
         if (ch === target) count++;
     }
-    return `"${text}"에서 '${target}'는 ${count}번 등장합니다.`
+    return (text, target, count);
 }
 
 const testOne = countChar("박씨는 이씨에게 시집간 김씨의 외사촌 동생이다.", "씨");
 const testTwo = countChar("이상의 「날개」는 1936년 작품이다.", "이");
 const testThree = countChar("banana", "a");
 
-console.log(testOne);
-console.log(testTwo);
-console.log(testThree);
+console.log(`"${testOne[0]}"에서 '${testOne[1]}'는 ${testOne[2]}번 등장합니다.`);
+console.log(`"${testTwo[0]}"에서 '${testTwo[1]}'는 ${testTwo[2]}번 등장합니다.`);
+console.log(`"${testThree[0]}"에서 '${testThree[1]}'는 ${testThree[2]}번 등장합니다.`);
 
 // Q4
 
@@ -56,10 +56,10 @@ const targets = ["이", "의", "날", "개", "소"];
 const counts = targets.map(target => countChar(text, target));
 
 for (let i = 0; i < counts.length; i++) {
-    console.log(`'${targets[i]}': ${counts[i]}번`)
+    console.log(`'${targets[i]}': ${counts[i][2]}번`)
 }
 
-const frequent = targets.filter(t => countChar(text, t) >= 2);
+const frequent = targets.filter(t => countChar(text, t)[2] >= 2);
 console.log(frequent);
 
 let maxIdx = 0
