@@ -64,6 +64,6 @@ console.log(frequent);
 
 let maxIdx = 0
 for (let i = 1; i < counts.length; i++) {
-    if (counts[maxIdx] < counts[i]) maxIdx = i;
+    if (counts[maxIdx][2] < counts[i][2]) maxIdx = i;
 }
-console.log(`가장 자주 나온 글자: '${targets[maxIdx]}' (${counts[maxIdx]}번)`)
+console.log(`가장 자주 나온 글자: '${targets[maxIdx]}' (${counts[maxIdx][2]}번)`)
