@@ -27,7 +27,7 @@ console.log(titled);
 const long = works.filter(work => work.length >= 3);
 console.log(long);
 
-for (let i = 0; i < works.length; i++) {
+for (let i = 0; i < long.length; i++) {
     console.log(`${i+1}번째 작품: ${long[i]}`)
 }
 
