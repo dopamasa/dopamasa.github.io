@@ -37,7 +37,7 @@ function countChar(text, target) {
     for (const ch of text) {
         if (ch === target) count++;
     }
-    return (text, target, count);
+    return [text, target, count];
 }
 
 const testOne = countChar("박씨는 이씨에게 시집간 김씨의 외사촌 동생이다.", "씨");
