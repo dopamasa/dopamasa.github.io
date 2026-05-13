@@ -13,8 +13,8 @@ const targetBox = document.querySelector('#target-input');
 const list = document.querySelector('#freq-list');
 const topBox = document.querySelector('#top-char');
 
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
+form.addEventListener('input', (e) => {
+    //e.preventDefault();
 
     const text = textBox.value;
     const targets = targetBox.value.split(',').map(s => s.trim());
